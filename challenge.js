@@ -1,16 +1,17 @@
 function leftmostNodesSum(array) {
-  function helper(array, index) {
-    // Base case: if the index is out of range or the node is 0, return 0
-    if (index >= array.length || array[index] === 0) {
-      return 0;
+  let sum = 0;
+  let index = 0;
+
+  while (index < array.length) {
+    if (array[index] !== 0) {
+      sum += array[index];
+      index = 2 * index + 1;
+    } else {
+      break;
     }
-    
-    // Calculate the sum of the current node and its left child
-    return array[index] + helper(array, 2 * index + 1);
   }
-  
-  // Start the recursive traversal from the root (index 0)
-  return helper(array, 0);
+
+  return sum;
 }
 
 console.log(leftmostNodesSum([2, 7, 5, 2, 6, 0, 9]));
