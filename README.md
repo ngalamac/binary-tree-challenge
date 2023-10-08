@@ -34,7 +34,7 @@ Can you print out the sum of the Leftmost side of the Tree?
 ```
 leftmostNodesSum([2, 7, 5, 2, 6, 0, 9])
 // => 11
-```
+````
 
 Go down the left-hand side of the tree to get the sum: 2+7+2 = 11. You can take a look at the image of the tree above.
 
